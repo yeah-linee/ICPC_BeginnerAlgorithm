@@ -1,5 +1,5 @@
 #include <iostream>
-#include <algorithm>
+#include <algorithm>	//sort
 #include <vector>
 using namespace std;
 
@@ -16,7 +16,12 @@ int main()
 	{
 		int start, end;
 		cin >> start >> end;
-		meeting.push_back({ start, end });
+		meeting.push_back({ end, start });
 	}
 
+	sort(meeting.begin(), meeting.end());
+	for (auto &m : meeting)
+	{
+		cout << m.first << " " << m.second << '\n';
+	}
 }
