@@ -20,8 +20,15 @@ int main()
 	}
 
 	sort(meeting.begin(), meeting.end());
-	for (auto &m : meeting)
+
+	int n_meeting = 0, now_time = 0;
+	for(auto &m:meeting)
 	{
-		cout << m.first << " " << m.second << '\n';
+		if (m.second >= now_time)
+		{
+			now_time = m.first;
+			n_meeting++;
+		}
 	}
+	cout << n_meeting;
 }
