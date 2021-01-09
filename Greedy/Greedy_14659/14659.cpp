@@ -8,5 +8,23 @@ int main()
 	cin.tie(0);	cout.tie(0);
 
 	int n;	cin >> n;
-	cout << n;
+	for (int i = 1; i <= n; i++)
+		cin >> height[i];
+
+	int now = 1, max = 0;
+	while (now < n)
+	{
+		int enemy, win = 0;
+		for (enemy = now + 1; enemy <= n; enemy++)
+		{
+			if (height[enemy] < height[now])
+				win++;
+			else
+				break;
+		}
+		if (win > max) { max = win; }
+		now = enemy;
+	}
+	cout << max;
+	system("pause");
 }
