@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BruteForce_1018", "BruteFor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BackTracking_15649", "BackTracking_15649\BackTracking_15649.vcxproj", "{0CA7D220-B97B-47EC-8E54-6A361E9C3DFC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BackTracking_15650", "BackTracking_15650\BackTracking_15650.vcxproj", "{45FC4B18-3A30-4167-A59A-C47F6C3170B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{0CA7D220-B97B-47EC-8E54-6A361E9C3DFC}.Release|x64.Build.0 = Release|x64
 		{0CA7D220-B97B-47EC-8E54-6A361E9C3DFC}.Release|x86.ActiveCfg = Release|Win32
 		{0CA7D220-B97B-47EC-8E54-6A361E9C3DFC}.Release|x86.Build.0 = Release|Win32
+		{45FC4B18-3A30-4167-A59A-C47F6C3170B4}.Debug|x64.ActiveCfg = Debug|x64
+		{45FC4B18-3A30-4167-A59A-C47F6C3170B4}.Debug|x64.Build.0 = Debug|x64
+		{45FC4B18-3A30-4167-A59A-C47F6C3170B4}.Debug|x86.ActiveCfg = Debug|Win32
+		{45FC4B18-3A30-4167-A59A-C47F6C3170B4}.Debug|x86.Build.0 = Debug|Win32
+		{45FC4B18-3A30-4167-A59A-C47F6C3170B4}.Release|x64.ActiveCfg = Release|x64
+		{45FC4B18-3A30-4167-A59A-C47F6C3170B4}.Release|x64.Build.0 = Release|x64
+		{45FC4B18-3A30-4167-A59A-C47F6C3170B4}.Release|x86.ActiveCfg = Release|Win32
+		{45FC4B18-3A30-4167-A59A-C47F6C3170B4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
