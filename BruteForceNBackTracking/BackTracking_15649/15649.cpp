@@ -1,20 +1,17 @@
 #include <iostream>
-#include <queue>
+#include <vector>
 using namespace std;
 
 bool used[9] = { false };
-deque<int> n_deq;
+vector<int> sequence;
 int n, m;
 
 void bt(int height)
 {
 	if (height == m)
 	{
-		while (!n_deq.empty())
-		{
-			cout << n_deq.front() << ' ';
-			n_deq.pop_front();
-		}
+		for (auto &e : sequence)
+			cout << e << ' ';
 		cout << '\n';
 		return;
 	}
@@ -24,11 +21,11 @@ void bt(int height)
 		{
 			if (used[i] == false)
 			{
-				n_deq.push_back(i);
+				sequence.push_back(i);
 				used[i] = true;
 				bt(height + 1);
-				if(!n_deq.empty())
-					n_deq.pop_back();
+				
+				sequence.pop_back();
 				used[i] = false;
 			}
 		}
