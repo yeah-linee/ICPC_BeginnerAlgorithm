@@ -2,7 +2,7 @@
 using namespace std;
 
 int N;
-long long n_fibo[91];
+long long n_fibo[1000000];
 
 int main()
 {
