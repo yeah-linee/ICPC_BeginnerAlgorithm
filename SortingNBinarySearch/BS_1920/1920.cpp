@@ -23,10 +23,12 @@ int main()
 	for (int i = 0; i < M; i++)
 	{
 		int l = 0, h = N - 1;
-		int m = (l + h) / 2;
+		int m;
 
 		while (h >= l)
 		{
+			m = (h + l) / 2;
+
 			if (arr[m] == tmp[i])
 				break;
 			else if (arr[m] < tmp[i])
