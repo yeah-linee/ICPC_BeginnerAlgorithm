@@ -15,14 +15,17 @@ int main()
 	for (int i = 1; i <= N; i++)
 		queue.push(i);
 
+	cout << "<";
 	int count = 0;
 	while (!queue.empty())
 	{
 		count++;
 		if (count == K)
 		{
-			cout << queue.front() << ", ";
+			cout << queue.front();
 			queue.pop();
+			if (!queue.empty())	cout << ", ";
+			count = 0;
 		}
 		else
 		{
@@ -30,4 +33,5 @@ int main()
 			queue.pop();
 		}
 	}
+	cout << ">";
 }
