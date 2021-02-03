@@ -12,6 +12,9 @@ int main()
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);	cout.tie(0);
 
+	cout << fixed;			// 소수점 고정
+	cout.precision(2);		// 소수 둘째자리까지
+
 	cin >> N;	cin >> formula;
 	for (int i = 0; i < N; i++)
 		cin >> sTon[i];
@@ -20,7 +23,7 @@ int main()
 
 	for (auto &f : formula)
 	{
-		if ((f < 'A') && (f > 'N'))		// f가 연산자일 때
+		if ((f == '+') || (f == '-') || (f == '*') || (f == '/'))		// f가 연산자일 때
 		{
 			double right = st.top();
 			st.pop();
