@@ -2,7 +2,7 @@
 #include <queue>
 using namespace std;
 
-long long A, B;
+long long N, K;
 
 void BFS(int start)
 {
@@ -12,8 +12,8 @@ void BFS(int start)
 	{
 		pair<long long, long long> tmp = my_queue.front();
 		my_queue.pop();
-		if (tmp.first > B)	continue;
-		else if (tmp.first == B)
+		if (tmp.first > K)	continue;
+		else if (tmp.first == K)
 		{
 			cout << tmp.second;
 			return;
@@ -32,7 +32,7 @@ int main()
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);	cout.tie(0);
 	
-	cin >> A >> B;
+	cin >> N >> K;
 
-	BFS(A);
+	BFS(N);
 }
