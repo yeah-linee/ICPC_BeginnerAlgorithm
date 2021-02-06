@@ -17,14 +17,25 @@ void BFS(int diff)
 		int tmp = my_que.front();
 		my_que.pop();
 
+		vector<int> v_copy;
+		v_copy.resize(visited.size());
+		copy(visited.begin(), visited.end(), v_copy.begin());
+
 		if (!list[tmp].empty())
 		{
 			for (auto &e : list[tmp])
 			{
 				if (visited[e] < 0)
 				{
+					int sum = 0;
+					for (auto &f : list[e])
+						if (v_copy[f] >= 0)
+							sum++;
+					if (sum >= ((float)list[e].size() / 2.0f))	// 과반수 이상
+					{
 						my_que.push(e);
 						visited[e] = visited[tmp] + 1;
+					}
 				}
 			}
 		}
@@ -62,21 +73,4 @@ int main()
 
 	for (int i = 1; i <= N; i++)
 		cout << visited[i] << ' ';
-
-	/***************input test**************
-	cout << "visited\n";
-	for (auto &e : visited)
-		cout << e << ' ';
-	cout << '\n';
-	cout << "adjacent list\n";
-	for (int i = 1; i <= N; i++)
-	{
-		for (auto &e : list[i])
-			cout << e << ' ';
-		cout << '\n';
-	}
-	cout << "fisrt\n";
-	for (auto &e : first)
-		cout << e << ' ';
-	*/
 }
